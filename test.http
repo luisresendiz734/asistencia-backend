@@ -1,0 +1,45 @@
+POST http://localhost:4000/auth/register HTTP/1.1
+Content-Type: application/json
+
+{
+    "data": {
+        "profile": "https://avatars.githubusercontent.com/u/80994311?v=4",
+        "firstName": "Luis",
+        "lastName": "Resendiz",
+        "civilState": "soltero",
+        "age": 24,
+        "children": "0",
+        "house": 1,
+        "phone": "5577665544",
+        "email": "luis@mail.com",
+        "password": "123456",
+        "curp": "JRCT763948DHSJSU00",
+        "rfc": "GRCN876539JDT",
+        "nss": "987234234",
+        "birthDate": "05-02-1997",
+        "birthPlace": "Ciudad de Mexico",
+        "address": "Av Morelos 23",
+        "nationality": "mexicana",
+        "education": "Licenciatura",
+        "profesion": "Ingeniero en Sistemas Computacionales",
+        "position": "Jefe de Finanzas/ Jefe de Compras /Almacenista",
+        "department": "Finanzas",
+        "salary": 25000,
+        "schedule": "8am - 4pm",
+        "directBoss": "Juan Lopez"
+    }
+}
+
+###
+
+POST http://localhost:4000/auth/login HTTP/1.1
+Content-Type: application/json
+
+{
+    "email": "luis@mail.com",
+    "password": "123456"
+}
+
+###
+
+GET http://localhost:4000/users HTTP/1.1
