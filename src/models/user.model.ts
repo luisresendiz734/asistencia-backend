@@ -18,7 +18,7 @@ interface UserInstance
   extends Model<UserAttributes, UserCreationAttributes>,
     UserAttributes {}
 
-const User = sequelize.define<UserInstance>("Users", {
+const User = sequelize.define<UserInstance>("users", {
   id: {
     type: DataTypes.INTEGER,
     autoIncrement: true,
@@ -44,9 +44,9 @@ const User = sequelize.define<UserInstance>("Users", {
   },
   updatedAt: {
     type: DataTypes.DATE,
-  },
+  }
 });
-
+/*
 export const createUserTable = async () => {
   const queryInterface = sequelize.getQueryInterface();
   await queryInterface.createTable("Users", {
@@ -78,5 +78,5 @@ export const createUserTable = async () => {
     },
   });
 };
-
+*/
 export default User;

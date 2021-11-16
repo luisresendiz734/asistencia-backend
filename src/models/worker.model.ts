@@ -37,7 +37,7 @@ interface WorkerInstance
   extends Model<WorkerAttributes, WorkerCreationAttributes>,
     WorkerAttributes {}
 
-const Worker = sequelize.define<WorkerInstance>("Workers", {
+const Worker = sequelize.define<WorkerInstance>("workers", {
   id: {
     type: DataTypes.INTEGER,
     autoIncrement: true,
@@ -120,9 +120,9 @@ const Worker = sequelize.define<WorkerInstance>("Workers", {
   },
   updatedAt: {
     type: DataTypes.DATE,
-  },
+  }
 });
-
+/*
 export const createWorkerTable = async () => {
   const queryInterface = sequelize.getQueryInterface();
   await queryInterface.createTable("Workers", {
@@ -211,5 +211,5 @@ export const createWorkerTable = async () => {
     },
   });
 };
-
+*/
 export default Worker;

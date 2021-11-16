@@ -37,7 +37,6 @@ export const loginUserWithEmailAndPassword = async (
         password,
       },
     });
-
     if (user) {
       user.password = "";
       res.json({ auth: true, user });
@@ -48,3 +47,7 @@ export const loginUserWithEmailAndPassword = async (
     res.status(500).json({ auth: false, error });
   }
 };
+
+export const logout = async (req: Request, res: Response) => {
+  res.json({ auth: false });
+}
